@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MVC - Json file upload into database</h2>
+
+<hr />
+
+<center>
+    @using (Html.BeginForm("uploadjson", "Json", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <h4>@ViewBag.Errmsg</h4>
+        <h4>@ViewBag.message</h4>
+        <input type="file" id="JSONFile" name="filejson" />
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    }
+</center>
